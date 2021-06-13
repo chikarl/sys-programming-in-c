@@ -1,0 +1,2 @@
+My name is Elroy Kanye. I am a CS Student in NAHPI, Cameroon.
+This file is to be read in an example in a syscall: read()

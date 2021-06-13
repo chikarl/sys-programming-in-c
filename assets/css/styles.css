@@ -1,0 +1,9 @@
+.image-example {
+    height:auto;
+    max-width:100%;
+    image-orientation: flip;
+    
+}
+body {
+    background-color: azure;
+}
