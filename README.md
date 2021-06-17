@@ -1,4 +1,4 @@
-## Welcome my bomb and funny repo - System Programming in C
+## Welcome to my bomb and funny repo - System Programming in C
 
 You can use the files in each directory to see how to implement the examples described by the name of the directory.
 
