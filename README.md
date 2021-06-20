@@ -15,7 +15,7 @@ Having trouble with implementations? Check out my bio and get my WhatsApp contac
 #### Rules for running the catwc program in assignments folder
  - $ gcc -c catwc.c
  - $ gcc catwc.o -o catwc
- - $ ./catwc <file>
+ - $ ./catwc file.txt
   
   
   
