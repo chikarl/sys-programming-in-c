@@ -10,3 +10,13 @@ You can help me make it beautiful.
 ### Support or Contact
 
 Having trouble with implementations? Check out my bio and get my WhatsApp contact. I will try to sort it out for you if I still can.
+
+
+#### Rules for running the catwc program in assignments folder
+ - $ gcc -c catwc.c
+ - $ gcc catwc.o -o catwc
+ - $ ./catwc file.txt
+  
+  
+  
+
