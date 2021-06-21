@@ -1,0 +1,7 @@
+Owner: Elroy Ankelmbom Yonghabichia
+
+
+  Operating System: Linux 5.9.0-kali1-amd64 #1 SMP Debian 5.9.1-1kali2 (2020-10-29) x86_64
+  Processor ID:     x86 Family 6 Model 37 Stepping 5, GenuineIntel
+  Host Name:        karnage
+Picked up _JAVA_OPTIONS: -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true
