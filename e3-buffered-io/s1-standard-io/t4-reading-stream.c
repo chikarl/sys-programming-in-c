@@ -1,13 +1,15 @@
 #include <stdio.h>
 #include "../../apue.h"
 
-// int fgetc(FILE *stream)
+// int fgetc(FILE *stream) : at the pointer
 
 /*
 This function reads the next character from the stream and returns it as an unsigned character cast to an int.
 The casting is done to have a sufficient range for notification of end-of-file or error: EOF is returned in such conditions.
 The return value of fgetc() must be stored in an int. Storing it in char is a common but dangerous mistake.
 */
+
+// char *fgets (char *str, int size, FILE *stream) : reading a line starting from pointer
 
 int main() {
     FILE *fp;
