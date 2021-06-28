@@ -1,1 +1,3 @@
 To show the example of reading and writing file stream
+Line 2
+Line 3
