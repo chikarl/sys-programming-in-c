@@ -35,5 +35,15 @@ int main() {
             printf("%d = %c\n", c, (char) c);
         } printf("End\n\n");
 
+        // Reading an entire line
+        printf("Reading an entire line starting from current fp.\n");
+        if(!fgets(line, MAXLINE, fp)) {
+            char *er = strerror(errno);
+            printf("%s\n", er);
+            exit(0);
+        } else {
+            printf("%s", line);
+            printf("Done\n");
+        } printf("End\n\n");
     }
 }
