@@ -1,5 +1,7 @@
 ## Welcome to my bomb and funny repo - System Programming in C
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9818ca1bfed348419b47bef6baefe4af)](https://app.codacy.com/gh/elroykanye/sys-programming-in-c?utm_source=github.com&utm_medium=referral&utm_content=elroykanye/sys-programming-in-c&utm_campaign=Badge_Grade_Settings)
+
 You can use the files in each directory to see how to implement the examples described by the name of the directory.
 
 If you are interested in contributin to this repository, feel free to fork, do the changes and make a pull request
