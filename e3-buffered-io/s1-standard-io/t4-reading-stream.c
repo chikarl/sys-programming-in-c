@@ -14,6 +14,9 @@ The return value of fgetc() must be stored in an int. Storing it in char is a co
 int main() {
     FILE *fp;
     int c;
+    char line[MAXLINE];
+
+
     printf("EOF = %d\n", EOF);
 
     fp = fopen("open.txt", "r");
