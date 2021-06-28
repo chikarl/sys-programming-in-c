@@ -19,6 +19,8 @@ int main() {
         char *er = strerror(errno);
         printf("%s\n", er);
     } else {
+        // reading just the pointer fp
+        printf("Reading just the pointer fp\n");
         c = fgetc(fp);
         if (c == EOF) {
             char *er = strerror(errno);
@@ -26,6 +28,7 @@ int main() {
             exit(0);
         } else {
             printf("%d = %c\n", c, (char) c);
-        }
+        } printf("End\n\n");
+
     }
 }
