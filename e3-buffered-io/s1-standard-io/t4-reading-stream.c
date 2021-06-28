@@ -35,6 +35,15 @@ int main() {
             printf("%d = %c\n", c, (char) c);
         } printf("End\n\n");
 
+        // will be commented out
+        /*
+        printf("Test\n");
+        while((c = fgetc(fp)) != EOF) {
+            printf("%c", (char)c);
+        } printf("\n\n");
+        */
+        // end here
+
         // Reading an entire line
         printf("Reading an entire line starting from current fp.\n");
         if(!fgets(line, MAXLINE, fp)) {
