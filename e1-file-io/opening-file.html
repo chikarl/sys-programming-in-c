@@ -15,48 +15,48 @@
 
             <section>
                 The most basic method of accessing a file is via the <b>read()</b> and <b>write()</b> system calls.
-                <br>
                 But before we open the file, it must be opened using an <b>open()</b> or <b>create()</b> system call.
-                <br>
                 Once we are done with a file, it is the standard to always close it using the <b>close()</b> system call.
 
             </section>
             <br>
             <section>
                 <h3>The open() call</h3>
-                <br>
-                With this, a file is opened and a file descriptoris obtained with the open() system call.<br>
-                The open system call takes an argument <b>name</b> which is path of the file and maps the file descriptorto it, then returns that file descriptor on success. The file position is then set to 0 and the file is opened for access accordint to the flags given by the next argument <b>flag</b>
-                <br>
+                <p>
+
+                    With this, a file is opened and a file descriptoris obtained with the open() system call.
+                    The open system call takes an argument <b>name</b> which is path of the file and maps the file descriptorto it, then returns that file descriptor on success. The file position is then set to 0 and the file is opened for access accordint to the flags given by the next argument <b>flag</b>
+                </p>
+                
                 <h4>Flag Argument</h4>
-                The <b>flag</b> argument determines how the file will be opened - readonly, writeonly, etc.
-                <br>
-                This argument must be one of the following: 
-                <ul>
-                    <li>O_RDONLY for read-only</li>
-                    <li>O_WRONLY for write-only</li>
-                    <li>O_RDWR for read-write</li>
-                </ul>
-                <br>
-                Let us look at my simple example. Refer to <b>e1-file-io/opening-file.c</b> for the code.
-                <br>
-                You notice here that I set the path first to a valid file in this directory which produced a file descriptor of 3 for that file.
-                <br><br>
-                <div  >
+                <p>
+                    The <b>flag</b> argument determines how the file will be opened - readonly, writeonly, etc.
+                    This argument must be one of the following: 
+                    <ul>
+                        <li>O_RDONLY for read-only</li>
+                        <li>O_WRONLY for write-only</li>
+                        <li>O_RDWR for read-write</li>
+                    </ul>
+                </p>
+                <p>
+                    Let us look at my simple example. Refer to <b>e1-file-io/opening-file.c</b> for the code.
+                    
+                    You notice here that I set the path first to a valid file in this directory which produced a file descriptor of 3 for that file.
+                </p>
+                <div >
                     <img class="image-example" src="../assets/img/opening-file.png">
                 </div>
-
-                <br>
-                <br>
-                The flags argument can be multiple, separated by <b>|</b> (bitwise OR) changing the behaviour of the open request.
-                <br>
-                Other important flags include:
-                <ul>
-                    <li>O_APPEND: Opens the file in append mode.</li>
-                    <li>O_CREAT: Creates the file if it does not exist</li>
-                    <li><b>Contributors to this repo can add more flags when they can.</b></li>
+                <p>
+                    The flags argument can be multiple, separated by <b>|</b> (bitwise OR) changing the behaviour of the open request.
                     
-                </ul>
+                    Other important flags include:
+                    <ul>
+                        <li>O_APPEND: Opens the file in append mode.</li>
+                        <li>O_CREAT: Creates the file if it does not exist</li>
+                        <li><b>Contributors to this repo can add more flags when they can.</b></li>
+                        
+                    </ul>
+                </p>
             </section>
         </main>
     </body>
