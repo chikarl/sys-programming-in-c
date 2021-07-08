@@ -10,16 +10,28 @@
 
             <section>
                 <p>
-                    Before we read or write to a file, we must open it. The linux kernel keeps a process list for each process of all the files which are opened, called the file table. <br>
-                    The table has indexes of unsigned integers called file descriptors (fds). Each entry contains info about the file which we opened, including a pointer to a location in memory with a copy of the file's backing inode and metadata associated with that file - such as file position and access modes. <br>
-                    <strong>When we open a file, a file descriptor is returned</strong>, while subsequent operations (reading or writing) take the file descriptor as their primary argument.<br><br>
+                    Before we read or write to a file, we must open it. The linux kernel keeps a process 
+                    list for each process of all the files which are opened, called the file table.
+                    The table has indexes of unsigned integers called file descriptors (fds). Each 
+                    entry contains info about the file which we opened, including a pointer to a location in
+                    memory with a copy of the file's backing inode and metadata associated with that file - 
+                    such as file position and access modes.<strong>When we open a file, a file descriptor is returned</strong>, 
+                    while subsequent operations (reading or writing) take the file descriptor as their primary argument.
+                </p>
 
-                    Normally, a child process recieves a copy of its parent's file table. The list of open files and their access modes, current file positions, etc are all the same. The only thing to note is that a change in one process, like a child process closing a file, does not affect the other process' file table. <br>
-
-                    <strong>File descriptors are represented by integers in C (int type).</strong> Each Linux process has a maximum number of files that it may open. File descriptorsstart at 0, and go up to less than this maximum value. By default, the max is always <b>1024</b> but can be configured to be as high as <b>1,048,576</b>.
-                    <br><br>
-                    <strong>Special Note:</strong> since negative values are not legal fds (file descriptors), -1 is often used to indicate a error from a function that would otherwise return a valid file descriptor.
-                    <br><br>
+                <p>
+                    Normally, a child process recieves a copy of its parent's file table. The list of open files and their access 
+                    modes, current file positions, etc are all the same. The only thing to note is that a change in one process, 
+                    like a child process closing a file, does not affect the other process' file table.
+                    <strong>File descriptors are represented by integers in C (int type).</strong> Each Linux process has a maximum 
+                    number of files that it may open. File descriptorsstart at 0, and go up to less than this maximum value. 
+                    By default, the max is always <b>1024</b> but can be configured to be as high as <b>1,048,576</b>.
+                </p>
+                <p class="note">
+                    <strong><span>!</span> Special Note:</strong> since negative values are not legal fds (file descriptors), 
+                    -1 is often used to indicate a error from a function that would otherwise return a valid file descriptor.
+                </p>
+                <p>
                     Unless the process explicitly closes them, every proces by convention has at least three file descriptors open: {0,1,2} 
                     <ul>
                         <li>
@@ -33,8 +45,9 @@
                         </li>
                     </ul>
                     Instead of referencing these integers directly, the C library provides the preprocessor defines <b>STDIN_FILENO</b>, <b>STDOUT_FILENO</b>, <b>STDERR_FILENO</b>.
-                    <br><br>
-                    <strong>Another Note:</strong> File descriptors can reference more than just files. They can be used for accessing device files and pipes, directories and futexes (whatever this is), FIFOs and sockets - that is following the Plan9 everything-is-a-file-philosophy, we can read anything using fds.
+                </p>
+                <p class="note">
+                    <strong> <span>!</span> Another Note:</strong> File descriptors can reference more than just files. They can be used for accessing device files and pipes, directories and futexes (whatever this is), FIFOs and sockets - that is following the Plan9 everything-is-a-file-philosophy, we can read anything using fds.
                 </p>
             </section>
             
